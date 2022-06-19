@@ -30,7 +30,7 @@ export const Server = () => {
     });
 
     const file = process.env.NODE_ENV === 'prod' ? '.env' : '.env.dev';
-    const env = config({path: join(__dirname, "../..", file)});
+    const env = config({path: join(__dirname, '../..', file)});
     const port = env.parsed?.PORT || 8089;
 
     http.listen(port, () => console.log(`Listening on port ${port}`));
